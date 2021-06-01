@@ -1,0 +1,139 @@
+1. 스택/ 큐
+스택 자료구조는 책을 쌓는 것처럼 차고차곡 쌓아 올린 형태
+스택에서 삽입하는 연산 push, 삭제하는 연산 pop
+스택은 시간순서에 따라 자료가 쌓여서 가장 마지막에 삽입된 자료가 가장 먼저 삭제
+큐는 놀이동산에서 줄의 순서를 기다리는 것처럼 먼저들어온 자료가 먼저 나가는 형태
+큐의 양 끝에서 각각 삭제 및 삽입연산만을 담당
+
+스택
+  Stack ,쌓다
+  프로그래밍에서 목록 혹은 리스트에서 접근이 한 쪽에서만 가능한 구
+  LIFO(Last-In, First- Out)가 기본원리
+  구현가능한 내장함수 push/peek/pop
+
+  스택구조
+  Books = [Book1, Book2, Book3]
+  push [Book4]
+  Books = [Book1, Book2, Book3, Book4]
+  peek [Book4]
+  pop [Book4]
+  Books = [Book1, Book2, Book3]
+
+  구현 방법(Python)
+  직접구현/이미 구현된 클래스 import/List를 스택으로 구현
+
+Python 스택 직접 구현
+
+  class Stack(list):
+
+   push =  list.append
+
+    def peek(self):
+     return self[-1]
+     self[len(self)-1]
+
+  Pop은 list의 내장함수로 이미 존재
+ 
+Python 스택 직접 구현 활용
+  s= Stack()
+  s.push(1)
+  s.push(5)
+  s.push(10)
+  print("my stack is : ", s) / my stack is : [1, 5, 10]
+  print("popped value is : ", s.pop()) / popped value is : 10
+  print("my stack is : ", s) / my stack is : [1,5]
+  print("peeked value is : ",s.peek()) / peeked value is : 5
+  print("my stack is : ", s) / my stack is : [1, 5]
+
+Python List를 스택으로활용
+  s=[]
+  s.append(1)
+  s.append(5)
+  s.append(10)
+  print("my stack is : ", s) / my stack is : [1, 5, 10]
+  print("popped value is : ", s.pop()) / popped value is : 10
+  print("my stack is : ", s) / my stack is : [1,5]
+  print("peeked value is : ",s.peek()) / peeked value is : 5
+  print("my stack is : ", s) / my stack is : [1, 5]
+
+스택의 활용
+ 브라우저 앞뒤페이지이동기능
+  [(이전페이지)] - 네이버 - [(다음페이지)] / 구글로 이동
+  [네이버] - 구글 - [(다음페이지)] / 유튜브로 이동
+  [네이버, 구글] - 유튜브 - [(다음페이지)] / 이전페이지로 이동
+  [네이버] - 구글 - [유튜브] / 이전페이지로 이동
+  [(이전페이지)] - 네이버 - [유튜브, 구글] 
+ 깊이우선탐색(DFS)
+
+
+큐
+  Queue, 일이 처리되기를 기다리는 리스트
+  프로그래밍에서 목록 혹은 리스트에서 양쪽으로 접근이 가능한 구조
+  FIFO(First-In, First-Out)가 기본원리(선착순)
+  구현함수 put / peek / get
+
+  큐의 구조
+  컨베이어
+  Box List = [Box1, Box2, Box3]
+  put [Box4]
+  Box List = [Box1, Box2, Box3, Box4]
+  peek [Box1]
+  get [Box1]
+  Box List = [Box2, Box3, Box4]
+  
+Python 큐의 구현방법
+  직접구현 / 이미 구현된 클래스 Import / List를 큐로 구현
+
+Python 큐 직접 구현
+
+  class Queue(list):
+
+   put = list.append
+   
+  def peek(self):
+   return self[0]
+
+  def get(self):
+   return self.pop(0)
+
+Python 큐 직접 구현 활용
+  q = Queue()
+  q.Put(1)
+  q.put(5)
+  q.put(10)
+  print("my queue is : ", q) / my queue is : [1, 5, 10]
+  print("removed value is : ", q.get()) / removed value is : 1
+  print("my queue is : ", q) / my queue is : [5, 10]
+  print("peeked value is : ", q.peek()) / peeked value is : 5
+  print("my queue is : ", q) / my queue is : [5, 10]
+
+Python 구현된 클래스 Import
+
+  from queue import Queue
+  
+  q = Queue()
+  q.Put(1)
+  q.put(5)
+  q.put(10)
+  print("my queue is : ", q) / my queue is : [1, 5, 10]
+  print("removed value is : ", q.get()) / removed value is : 1
+  print("my queue is : ", q) / my queue is : [5, 10]
+  print("peeked value is : ", q.peek()) / peeked value is : 5
+  print("my queue is : ", q) / my queue is : [5, 10]
+
+Python List를 큐로 활용
+
+  q = []
+  q.append(1)
+  q.append(5)
+  q.append(10)
+  print("my queue is : ", q) / my queue is : [1, 5, 10]
+  print("removed value is : ", q.get()) / removed value is : 1
+  print("my queue is : ", q) / my queue is : [5, 10]
+  print("peeked value is : ", q.peek()) / peeked value is : 5
+  print("my queue is : ", q) / my queue is : [5, 10]
+
+큐의 활용
+프린터 인쇄 대기열
+  print [doc1, doc2, doc3]
+너비우선탐색(BFS)

@@ -32,6 +32,7 @@
 # ※ 공지 - 2020년 7월 14일 테스트케이스가 추가되었습니다.
 
 # Solutions
+# First-In, First-Out of Queue
 
 def solution(progresses, speeds):
 

@@ -1,3 +1,3 @@
 # INTRODUCE ALGORITHMS
-Algorithm is whole process about solve all kind of problems.
-it also can make document of array sentences components, like component object dictionary action to execute complements.
+Algorithm is whole process about solve all type of problems.
+it also can make document of array, list, sentence, component, object, functions to build execute complement from data.

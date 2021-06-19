@@ -1,6 +1,6 @@
 DFS/BFS
 
-DFS
+DFS(Depth First Search)
 깊이우선탐색
 
  하나의 경우의 수에 대해 모든 경우의 수를 조사하고
@@ -75,7 +75,7 @@ DFS
 
 
 
-BFS(Depth First Search)
+BFS(Breadth First Search)
 너비우선탐색
 
  하나의 경우의 수에 대한 다음 단계의 모든 경우의 수를 조사하면서 해를 찾는 과정
